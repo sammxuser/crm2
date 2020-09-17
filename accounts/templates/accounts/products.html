@@ -1,4 +1,21 @@
 {% extends 'accounts/main.html'%}
 {% block content %}
-<h2> Products displayed here </h2>
+<div class="row">
+    <div class="col">
+        <h5>Products</h5>
+        <hr>
+        <div class="table-responsive-md">
+            <table class="table table-">
+                <thead>
+                    <tr>
+                        <th scope="col">Product</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Price</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+</div>
+
 {% endblock content%}

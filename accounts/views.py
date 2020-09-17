@@ -11,7 +11,3 @@ def products(request):
     context = {}
     return render(request,'accounts/products.html',context)
 
-def orders(request):
-    context = {}
-    return render(request,'accounts/orders.html', context)
-
