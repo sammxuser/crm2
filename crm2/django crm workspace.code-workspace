@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "..\\..\\crm"
+		}
+	],
+	"settings": {
+		"python.linting.pylintPath": "C:\\Users\\smbugua.STANDARDMEDIA\\AppData\\Local\\Programs\\Python\\Python37\\Scripts\\pylint"
+	}
+}
