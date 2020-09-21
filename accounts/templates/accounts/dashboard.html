@@ -15,6 +15,15 @@
                         <th scope="col">Phone</th>
                     </tr>
                 </thead>
+                <tbody>
+                    {% for customer in customers %}
+                    <tr>
+                        <td><a href="{% url 'customer-profile' customer.id %}">
+                                {{ customer.name }}</a></td>
+                        <td>{{ customer.phone }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
             </table>
         </div>
     </div>
@@ -23,6 +32,7 @@
         <hr>
         <div class="card card-body">
             <div class="table-responsive-md">
+                <a class="btn btn-primary btn-sm btn-block" href="{%url 'create_order' %}">Create Order</a>
                 <table class="table">
                     <thead class="thead-light">
                         <tr>
@@ -33,6 +43,17 @@
                             <th scope="col">Remove</th>
                         </tr>
                     </thead>
+                    <tbody>
+                        {%for order in last_five_orders %}
+                        <tr>
+                            <td>{{ order.product.name }}</td>
+                            <td>{{ order.date_created }}</td>
+                            <td>{{ order.status }}</td>
+                            <td><a class="btn btn-primary btn-sm btn-block" href="{% url 'update_order' order.id %}">Update</a></td>
+                            <td><a class="btn btn-danger btn-sm btn-block" href="{% url 'delete_order' order.id %}">Delete</a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
                 </table>
             </div>
         </div>
